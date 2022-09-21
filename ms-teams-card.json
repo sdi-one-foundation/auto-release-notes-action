@@ -1,0 +1,29 @@
+{
+    "@type": "MessageCard",
+    "@context": "http://schema.org/extensions",
+    "themeColor": "00b0d8",
+    "summary": "Release Notes for <Name of Service> summary",
+    "sections": [{
+        "activityTitle": "Release Notes for <Name of Service> title",
+        "facts": [{
+            "name": "Team",
+            "value": "<Team Name>"
+        }, {
+            "name": "Version",
+            "value": "<Version>"
+        }, {
+            "name": "Date Released",
+            "value": "<Date Released>"
+        }],
+        "markdown": true
+    }],
+    "potentialAction": [
+      {
+        "@type": "OpenUri",
+        "name": "Release Notes",
+        "targets": [
+          { "os": "default", "uri": "https://github.com/sdi-one-foundation/changelog-test/blob/main/CHANGELOG.md" }
+        ]
+      }
+    ]
+}

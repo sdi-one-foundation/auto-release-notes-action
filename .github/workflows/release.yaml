@@ -1,0 +1,82 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+  workflow_dispatch:
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Get Current Date
+        id: date
+        run: echo "::set-output name=date::$(date +'%Y-%m-%d')"
+
+      - name: Get the SHA_SHORT
+        shell: bash
+        run: echo "GITHUB_SHA_SHORT=$(git rev-parse --short HEAD)" >> $GITHUB_ENV
+
+      - name: Get the VERSION
+        shell: bash
+        run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
+
+      - name: Find and Replace Service Name
+        uses: jacobtomlinson/gha-find-replace@2.0.0
+        with:
+          find: "<Name of Service>"
+          replace: "auto-release-notes-action"
+
+      - name: Find and Replace Team Name
+        uses: jacobtomlinson/gha-find-replace@2.0.0
+        with:
+          find: "<Team Name>"
+          replace: Foundation
+
+      - name: Find and Replace Version
+        uses: jacobtomlinson/gha-find-replace@2.0.0
+        with:
+          find: "<Version>"
+          replace: ${{ env.VERSION }}
+
+      - name: Find and Replace Date
+        uses: jacobtomlinson/gha-find-replace@2.0.0
+        with:
+          find: "<Date Released>"
+          replace: ${{ steps.date.outputs.date }}
+
+      - name: Read ms-teams-card.json
+        id: read-json
+        uses: juliangruber/read-file-action@v1
+        with:
+          path: ./ms-teams-card.json
+
+      - name: Update Changelog
+        if: ${{ success() }}
+        uses: BobAnkh/auto-generate-changelog@v1.2.2
+        with:
+          ACCESS_TOKEN: ${{ secrets.DEVOPS_BOT_TOKEN }}
+          PATH: 'CHANGELOG.md'
+          COMMIT_MESSAGE: 'chore(bot): update files for Release ${{ env.VERSION }}.'
+          TYPE: |
+            'feat:Feature,
+            fix:Bug Fixes,
+            docs:Documentation,
+            refactor:Refactor,
+            perf:Performance Improvements,
+            maint:Maintenance,
+            chore:Miscellaneous,
+            test:Testing'
+
+      - name: Post to MS Teams Channel
+        if: ${{ success() }}
+        uses: fjogeleit/http-request-action@v1.11.0
+        with:
+          url: ${{ secrets.MS_TEAMS_RELEASE_WEBHOOK_URL }}
+          method: 'POST'
+          data: ${{ steps.read-json.outputs.content }}
+
