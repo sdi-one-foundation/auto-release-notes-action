@@ -20,7 +20,7 @@ jobs:
         run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
       - name: Auto Release Notes
-        uses: sdi-one-foundation/auto-release-noteS-action@v1
+        uses: sdi-one-foundation/auto-release-noteS-action@v1.0.0
         with:
           github-token: ${{ secrets.DEVOPS_BOT_TOKEN }}
           version: ${{ env.VERSION }}
