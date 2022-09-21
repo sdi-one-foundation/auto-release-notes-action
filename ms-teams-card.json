@@ -4,7 +4,7 @@
     "themeColor": "00b0d8",
     "summary": "Release Notes for <Name of Service> summary",
     "sections": [{
-        "activityTitle": "Release Notes for <Name of Service> title",
+        "activityTitle": "Release Notes for <Name of Service>",
         "facts": [{
             "name": "Team",
             "value": "<Team Name>"
