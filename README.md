@@ -25,6 +25,6 @@ jobs:
           github-token: ${{ secrets.DEVOPS_BOT_TOKEN }}
           version: ${{ env.VERSION }}
           service-name: ${{ github.event.repository.name }}
-          team-name: "Name of Team"
+          team-name: ${{ github.repository_owner }}
           ms-teams-webhook-url: ${{ secrets.MS_TEAMS_RELEASE_WEBHOOK_URL }}
 ```
