@@ -1,0 +1,23 @@
+# Exclude common OS files
+.DS_Store
+
+# Exclude common IDE project files
+.idea
+*.iml
+.project
+.settings
+.classpath
+.checkstyle
+.vscode/
+**/.vscode/*
+
+# Exclude env files
+.env
+
+# Exclude Terraform files
+**/.terraform/*
+.terraform/
+*.tfstate
+*.tfstate.*
+*.lock.hcl
+*.tfvars
