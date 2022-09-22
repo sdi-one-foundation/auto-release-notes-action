@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [v1.0.3](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.0.3) - 2022-09-22 14:41:29
+
+**Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1.0.2...v1.0.3
+
+### Miscellaneous
+
+- bot:
+  - update files for Release v1.0.2. ([d894062](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/d894062609116c29b083f469d5602ef44804a0bb))
+
 ## [v1.0.2](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.0.2) - 2022-09-22 14:16:58
 
 **Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1.0.1...v1.0.2
