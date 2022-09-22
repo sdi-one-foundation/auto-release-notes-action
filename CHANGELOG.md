@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [v1.0.4](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.0.4) - 2022-09-22 14:45:36
+
+**Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1.0.3...v1.0.4
+
+### Bug Fixes
+
+- general:
+  - remove include steps for replace action ([c91b202](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/c91b202cd64fea5eea6b572e180a461e78139435))
+
+### Miscellaneous
+
+- bot:
+  - update files for Release v1.0.3. ([b62d331](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/b62d331c4f18dff4161b6000f2b4ceb77dff07f1))
+
 ## [v1.0.3](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.0.3) - 2022-09-22 14:41:29
 
 **Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1.0.2...v1.0.3
