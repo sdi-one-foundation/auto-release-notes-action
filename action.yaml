@@ -34,28 +34,24 @@ runs:
       with:
         find: "<Name of Service>"
         replace: ${{ inputs.service-name }}
-        include: ./ms-teams-card.json
 
     - name: Find and Replace Team Name
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
         find: "<Team Name>"
         replace: ${{ inputs.team-name }}
-        include: ./ms-teams-card.json
 
     - name: Find and Replace Version
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
         find: "<Version>"
         replace: ${{ inputs.version }}
-        include: ./ms-teams-card.json
 
     - name: Find and Replace Date
       uses: jacobtomlinson/gha-find-replace@2.0.0
       with:
         find: "<Date Released>"
         replace: ${{ steps.date.outputs.date }}
-        include: ./ms-teams-card.json
 
     - name: Read ms-teams-card.json
       id: read-json
