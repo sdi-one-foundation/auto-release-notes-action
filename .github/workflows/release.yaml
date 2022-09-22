@@ -48,6 +48,12 @@ jobs:
         with:
           find: "<Date Released>"
           replace: ${{ steps.date.outputs.date }}
+          
+      - name: Find and Replace Github URL
+        uses: jacobtomlinson/gha-find-replace@2.0.0
+        with:
+          find: "<Repository URL>"
+          replace: ${{ github.server_url }}/${{ github.repository }}
 
       - name: Read ms-teams-card.json
         id: read-json
