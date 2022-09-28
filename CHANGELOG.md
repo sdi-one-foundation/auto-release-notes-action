@@ -1,5 +1,19 @@
 # CHANGELOG
 
+## [v1.1.0](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.1.0) - 2022-09-28 18:08:21
+
+**Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1.0.5...v1.1.0
+
+### Refactor
+
+- general:
+  - change commit prefixes to match SD standards ([d235f3b](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/d235f3bfbd5f5f1deedd56945177cfe4564ed817))
+
+### Miscellaneous
+
+- bot:
+  - update files for Release v1.0.5. ([b88b6bd](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/b88b6bd86d4bb280e6ac2d68706648b58d9c13b4))
+
 ## [v1.0.5](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.0.5) - 2022-09-22 19:19:19
 
 **Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1.0.4...v1.0.5
