@@ -21,7 +21,7 @@ jobs:
 
       - name: Auto Release Notes
         if: ${{ success() }}
-        uses: sdi-one-foundation/auto-release-noteS-action@v1.0.5
+        uses: sdi-one-foundation/auto-release-noteS-action@v1.1.0
         with:
           github-token: ${{ secrets.DEVOPS_BOT_TOKEN }}
           version: ${{ env.VERSION }}
