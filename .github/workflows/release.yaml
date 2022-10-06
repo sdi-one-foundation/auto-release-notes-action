@@ -69,14 +69,14 @@ jobs:
           PATH: 'CHANGELOG.md'
           COMMIT_MESSAGE: 'chore(bot): update files for Release ${{ env.VERSION }}.'
           TYPE: |
-            'feat:Feature,
+            feat:Feature,
             fix:Bug Fixes,
             style:Styling,
             refactor:Refactor,
             perf:Performance Improvements,
             test:Testing Changes,
             docs:Documentation,
-            chore:Miscellaneous'
+            chore:Miscellaneous
 
       - name: Post to MS Teams Channel
         if: ${{ success() }}
