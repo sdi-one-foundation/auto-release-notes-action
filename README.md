@@ -3,6 +3,11 @@ A composite Github Action for automatic release notes and notifications.
 
 Example release.yaml that uses this action:
 
+## Usage
+
+1. Re-run all "etc" runs in the infrastructure repositories.  This will create the CHANGELOG.md file used for the release notes action.
+2. Add the below yaml to your release.yaml file in application repositories.
+
 ```yaml
 name: Release
 
@@ -21,7 +26,7 @@ jobs:
 
       - name: Auto Release Notes
         if: ${{ success() }}
-        uses: sdi-one-foundation/auto-release-noteS-action@v1.1.1
+        uses: sdi-one-foundation/auto-release-notes-action@v1.1.1
         with:
           github-token: ${{ secrets.DEVOPS_BOT_TOKEN }}
           version: ${{ env.VERSION }}
