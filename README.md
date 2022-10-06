@@ -6,7 +6,23 @@ Example release.yaml that uses this action:
 ## Usage
 
 1. Re-run all "etc" runs in the infrastructure repositories.  This will create the CHANGELOG.md file used for the release notes action.
-2. Add the below yaml to your release.yaml file in application repositories.
+2. Add the following "paths-ignore" section to all main-push.yaml files to prevent accidental staging builds
+```yaml
+name: MainPush
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'CHANGELOG.md'
+      - '.github/**'
+      - '.development/**'
+  workflow_dispatch:
+```
+
+3. Add the below yaml to your release.yaml file in application repositories.
 
 ```yaml
 name: Release
