@@ -1,6 +1,8 @@
 # auto-release-notes-action
 A composite Github Action for automatic release notes and notifications.
 
+A global tag will be created (see release.yml) on every release.  This global tag will have the format of "v\<major version\>" (example: v1).  This global tag will point to the most recent release.  The input needs to be change upon every major version change (v1 to v2).
+
 Example release.yaml that uses this action:
 
 ## Usage
@@ -42,7 +44,7 @@ jobs:
 
       - name: Auto Release Notes
         if: ${{ success() }}
-        uses: sdi-one-foundation/auto-release-notes-action@v1.1.2
+        uses: sdi-one-foundation/auto-release-notes-action@v1
         with:
           github-token: ${{ secrets.DEVOPS_BOT_TOKEN }}
           version: ${{ env.VERSION }}
