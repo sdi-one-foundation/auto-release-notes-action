@@ -1,23 +1,20 @@
 # CHANGELOG
 
+## [v1.1.5](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.1.5) - 2023-02-01 17:41:09
+
+**Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1.1.4...v1.1.5
+
+### Miscellaneous
+
+
+- bot:
+  - update files for Release v1.1.4. ([3d76e18](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/3d76e18b159fbbaca33f56ef038105ca2dc13da1))
+
 ## [v1.1.4](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.1.4) - 2023-02-01 17:22:39
 
 **Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1.1.3...v1.1.4
 
 ## [v1.1.3](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.1.3) - 2023-02-01 17:17:41
-
-## What's Changed
-* fix: update autho-changelog version to fix docker build bug by @gallowaystorm in https://github.com/sdi-one-foundation/auto-release-notes-action/pull/2
-
-## New Contributors
-* @gallowaystorm made their first contribution in https://github.com/sdi-one-foundation/auto-release-notes-action/pull/2
-
-**Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1.1.2...v1.1.3
-
-### Bug Fixes
-
-- general:
-  - update autho-changelog version to fix docker build bug (#2) ([0652892](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/0652892f23bc9bc0709393816f5aa89182732dca)) ([#2](https://github.com/sdi-one-foundation/auto-release-notes-action/pull/2))
 
 ## [v1.1.2](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.1.2) - 2023-02-01 15:17:42
 
