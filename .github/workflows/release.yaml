@@ -84,14 +84,6 @@ jobs:
             docs:Documentation,
             chore:Miscellaneous
 
-      - name: Post to MS Teams Channel
-        if: ${{ success() }}
-        uses: fjogeleit/http-request-action@v1.11.0
-        with:
-          url: ${{ secrets.MS_TEAMS_RELEASE_WEBHOOK_URL }}
-          method: 'POST'
-          data: ${{ steps.read-json.outputs.content }}
-
         # Following action creates global tag to be used alongside new tag (example: v1 points to recent tags in version 1.  Need to change above input when change major versions)
       - name: Git config
         run: |
