@@ -67,7 +67,7 @@ runs:
 
     - name: Update Changelog
       if: ${{ success() }}
-      uses: BobAnkh/auto-generate-changelog@v1.2.2
+      uses: BobAnkh/auto-generate-changelog@v1.2.3
       with:
         ACCESS_TOKEN: ${{ inputs.github-token }}
         PATH: 'CHANGELOG.md'
