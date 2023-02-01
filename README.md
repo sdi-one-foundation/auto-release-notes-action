@@ -5,6 +5,27 @@ A global tag will be created (see release.yml) on every release.  This global ta
 
 Example release.yaml that uses this action:
 
+## Usage
+
+1. Re-run all "etc" runs in the infrastructure repositories.  This will create the CHANGELOG.md file used for the release notes action.
+2. Add the following "paths-ignore" section to all main-push.yaml files to prevent accidental staging builds
+```yaml
+name: MainPush
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - 'README.md'
+      - 'CHANGELOG.md'
+      - '.github/**'
+      - '.development/**'
+  workflow_dispatch:
+```
+
+3. Add the below yaml to your release.yaml file in application repositories.
+
 ```yaml
 name: Release
 
@@ -22,6 +43,7 @@ jobs:
         run: echo "VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
 
       - name: Auto Release Notes
+        if: ${{ success() }}
         uses: sdi-one-foundation/auto-release-noteS-action@v1
         with:
           github-token: ${{ secrets.DEVOPS_BOT_TOKEN }}
