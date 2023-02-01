@@ -4,6 +4,12 @@ on:
   release:
     types: [published]
   workflow_dispatch:
+    inputs:
+      main_version:
+        type: choice
+        description: The main version to update
+        options:
+          - v1
 
 jobs:
   release:
@@ -48,7 +54,7 @@ jobs:
         with:
           find: "<Date Released>"
           replace: ${{ steps.date.outputs.date }}
-          
+
       - name: Find and Replace Github URL
         uses: jacobtomlinson/gha-find-replace@2.0.0
         with:
@@ -85,4 +91,16 @@ jobs:
           url: ${{ secrets.MS_TEAMS_RELEASE_WEBHOOK_URL }}
           method: 'POST'
           data: ${{ steps.read-json.outputs.content }}
+
+        # Following action creates global tag to be used alongside new tag (example: v1 points to recent tags in version 1.  Need to change above input when change major versions)
+      - name: Git config
+        run: |
+          git config user.name sdi-devops-bot
+          git config user.email sdi-devops-bot@one.singledigits.com
+
+      - name: Tag new target with global tag
+        run: git tag -f ${{ github.event.inputs.main_version }} ${{ env.VERSION }}
+        
+      - name: Push new global tag
+        run: git push origin ${{ github.event.inputs.main_version }} --force
 
