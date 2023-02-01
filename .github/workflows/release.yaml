@@ -4,16 +4,12 @@ on:
   release:
     types: [published]
   workflow_dispatch:
-    inputs:
-      main_version:
-        type: choice
-        description: The main version to update
-        options:
-          - v1
 
 jobs:
   release:
     runs-on: ubuntu-latest
+    env:
+      GLOBAL_VERSION: "v1"
 
     steps:
       - name: Checkout
@@ -91,8 +87,8 @@ jobs:
           git config user.email sdi-devops-bot@one.singledigits.com
 
       - name: Tag new target with global tag
-        run: git tag -f ${{ github.event.inputs.main_version }} ${{ env.VERSION }}
+        run: git tag -f ${{ env.GLOBAL_VERSION }} ${{ env.VERSION }}
         
       - name: Push new global tag
-        run: git push origin ${{ github.event.inputs.main_version }} --force
+        run: git push origin ${{ env.GLOBAL_VERSION }} --force
 
