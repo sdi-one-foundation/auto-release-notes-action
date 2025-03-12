@@ -22,8 +22,8 @@
             "text": "Version : <Version>"
           },
           {
-            "type": "Date Released : <Date Released>",
-            "text": "<Version>"
+            "type": "TextBlock",
+            "text": "Date Released : <Date Released>"
           }
         ],
         "actions": [
