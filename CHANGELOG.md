@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## [v1.2.2](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.2.2) - 2025-03-12 18:09:47
+
+**Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1...v1.2.2
+
+### Feature
+
+- general:
+  - update formatting of style ([2469bbf](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/2469bbf83c04cbf1a367b0e4c8743bc2c2294f9f))
+
+### Miscellaneous
+
+
+- bot:
+  - update files for Release v1.2.1. ([ab874f8](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/ab874f85a91f712676483e203a9a3b9896f80c80))
+
 ## [v1.2.1](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.2.1) - 2025-03-12 17:59:28
 
 **Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1...v1.2.1
