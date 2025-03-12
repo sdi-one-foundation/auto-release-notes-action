@@ -11,15 +11,15 @@
           {
             "type": "TextBlock",
             "text": "Release Notes for <Name of Service>",
-            "size": "large"
+            "size": "large",
             "weight": "Bolder",
             "color": "Accent",
-            "wrap": true
-            "horizontalAlignment": "Center",
+            "wrap": true,
+            "horizontalAlignment": "Center"
           },
           {
             "type": "TextBlock",
-            "text": "Team : <Team Name>"
+            "text": "Team : <Team Name>",
             "separator": true
           },
           {
@@ -35,7 +35,7 @@
           {
             "type": "Action.OpenUrl",
             "url": "<Repository URL>/blob/main/CHANGELOG.md",
-            "title": "Release Notes"
+            "title": "Release Notes",
             "style": "positive"
           }
         ]
