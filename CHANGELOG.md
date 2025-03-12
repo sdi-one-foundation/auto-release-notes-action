@@ -1,23 +1,16 @@
 # CHANGELOG
 
-## [v1.2.0](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.2.0) - 2025-03-12 17:54:57
+## [v1.2.1](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.2.1) - 2025-03-12 17:59:28
 
-## What's Changed
-* fix: update card to use new MS Teams webhook Adaptive Card format by @gallowaystorm in https://github.com/sdi-one-foundation/auto-release-notes-action/pull/3
-
-
-**Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1...v1.2.0
-
-### Bug Fixes
-
-- general:
-  - update card to use new MS Teams webhook Adaptive Card format (#3) ([84d1842](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/84d184259f37d582365dc51cad5b2fa091beac23)) ([#3](https://github.com/sdi-one-foundation/auto-release-notes-action/pull/3))
+**Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1...v1.2.1
 
 ### Miscellaneous
 
 
 - bot:
-  - update files for Release v1.1.6. ([433f35d](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/433f35db4f5a236d529c0cb24a08c01ab7dd98df))
+  - update files for Release v1.2.0. ([1e9b7e0](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/1e9b7e07da35f2a1d6f21b337e9436558ad35d71))
+
+## [v1.2.0](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.2.0) - 2025-03-12 17:54:57
 
 ## [v1.1.6](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.1.6) - 2023-02-01 17:47:43
 
