@@ -1,29 +1,39 @@
 {
-    "@type": "MessageCard",
-    "@context": "http://schema.org/extensions",
-    "themeColor": "00b0d8",
-    "summary": "Release Notes for <Name of Service> summary",
-    "sections": [{
-        "activityTitle": "Release Notes for <Name of Service>",
-        "facts": [{
-            "name": "Team",
-            "value": "<Team Name>"
-        }, {
-            "name": "Version",
-            "value": "<Version>"
-        }, {
-            "name": "Date Released",
-            "value": "<Date Released>"
-        }],
-        "markdown": true
-    }],
-    "potentialAction": [
-      {
-        "@type": "OpenUri",
-        "name": "Release Notes",
-        "targets": [
-          { "os": "default", "uri": "<Repository URL>/blob/main/CHANGELOG.md" }
+  "type": "message",
+  "text": "Plain text is ok, but sometimes I long for more...",
+  "attachments": [
+    {
+      "contentType": "application/vnd.microsoft.card.adaptive",
+      "content": {
+        "type": "AdaptiveCard",
+        "version": "1.0",
+        "body": [
+          {
+            "type": "TextBlock",
+            "text": "Release Notes for <Name of Service>",
+            "size": "large"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Team : <Team Name>"
+          },
+          {
+            "type": "TextBlock",
+            "text": "Version : <Version>"
+          },
+          {
+            "type": "Date Released : <Date Released>",
+            "text": "<Version>"
+          }
+        ],
+        "actions": [
+          {
+            "type": "Action.OpenUrl",
+            "url": "<Repository URL>/blob/main/CHANGELOG.md",
+            "title": "Release Notes"
+          }
         ]
       }
-    ]
+    }
+  ]
 }
