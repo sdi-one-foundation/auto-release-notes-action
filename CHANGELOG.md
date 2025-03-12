@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## [v1.2.3](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.2.3) - 2025-03-12 18:16:04
+
+**Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1...v1.2.3
+
+### Bug Fixes
+
+- general:
+  - add commas to end of lines ([0354253](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/0354253dc87a9a61a2c86a9567e8dcae329c709b))
+
+### Miscellaneous
+
+
+- bot:
+  - update files for Release v1.2.2. ([fa527d5](https://github.com/sdi-one-foundation/auto-release-notes-action/commit/fa527d5952fc2088e476c1a508ec336aed74e0c3))
+
 ## [v1.2.2](https://github.com/sdi-one-foundation/auto-release-notes-action/releases/tag/v1.2.2) - 2025-03-12 18:09:47
 
 **Full Changelog**: https://github.com/sdi-one-foundation/auto-release-notes-action/compare/v1...v1.2.2
