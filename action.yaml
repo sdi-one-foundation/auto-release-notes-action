@@ -81,6 +81,14 @@ runs:
           test:Testing Changes,
           docs:Documentation,
           chore:Miscellaneous
+          
+    - name: Debug MS Teams webhook
+      run: |
+        if [ -n "${{ secrets.MS_TEAMS_RELEASE_WEBHOOK_URL }}" ]; then
+          echo "MS_TEAMS_RELEASE_WEBHOOK_URL is set"
+        else
+          echo "MS_TEAMS_RELEASE_WEBHOOK_URL is not set"
+        fi
 
     - name: Post to MS Teams Channel
       if: ${{ success() }}
