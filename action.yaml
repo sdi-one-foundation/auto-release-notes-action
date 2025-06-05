@@ -81,11 +81,6 @@ runs:
           test:Testing Changes,
           docs:Documentation,
           chore:Miscellaneous
-          
-    - name: Debug MS Teams webhook
-      shell: bash
-      run: |
-          echo "Log level: ${{ github.event.inputs.ms-teams-webhook-url }}"
 
     - name: Post to MS Teams Channel
       if: ${{ success() }}
