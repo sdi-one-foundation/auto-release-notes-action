@@ -85,11 +85,7 @@ runs:
     - name: Debug MS Teams webhook
       shell: bash
       run: |
-        if [ -n "${{ secrets.MS_TEAMS_RELEASE_WEBHOOK_URL }}" ]; then
-          echo "MS_TEAMS_RELEASE_WEBHOOK_URL is set"
-        else
-          echo "MS_TEAMS_RELEASE_WEBHOOK_URL is not set"
-        fi
+          echo "${{ inputs.ms-teams-webhook-url }} is set"
 
     - name: Post to MS Teams Channel
       if: ${{ success() }}
